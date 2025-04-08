@@ -33,6 +33,31 @@ paths:
                     type: string
         '400':
           description: Invalid input
+    get:
+      summary: Encode latitude and longitude into DIGIPIN
+      parameters:
+        - in: query
+          name: latitude
+          required: true
+          schema:
+            type: number
+        - in: query
+          name: longitude
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: Successfully encoded DIGIPIN
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  digipin:
+                    type: string
+        '400':
+          description: Invalid input
 
   /digipin/decode:
     post:
@@ -55,8 +80,30 @@ paths:
                 type: object
                 properties:
                   latitude:
-                    type: string
+                    type: number
                   longitude:
-                    type: string
+                    type: number
+        '400':
+          description: Invalid DIGIPIN
+    get:
+      summary: Decode DIGIPIN to coordinates
+      parameters:
+        - in: query
+          name: digipin
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successfully decoded DIGIPIN
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  latitude:
+                    type: number
+                  longitude:
+                    type: number
         '400':
           description: Invalid DIGIPIN

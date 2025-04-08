@@ -3,10 +3,12 @@ const cors = require('cors');
 const morgan = require('morgan');
 const digipinRoutes = require('./routes/digipin.routes');
 const swaggerUi = require('swagger-ui-express');
-const YAML = require('yamljs');
+const YAML = require('yaml');
+const fs = require('fs');
 const path = require('path');
 
-const swaggerDocument = YAML.load(path.join(__dirname, '../swagger.yaml'));
+// const swaggerDocument = YAML.load(path.join(__dirname, '../swagger.yaml'));
+const swaggerDocument = YAML.parse(fs.readFileSync(path.join(__dirname, '../swagger.yaml'), 'utf8'));
 
 const app = express();
 
