@@ -11,7 +11,7 @@ DIGIPIN (Digital PIN) is a 10-character alphanumeric geocode developed by the De
 
 This open-source Node.js project exposes a public API to generate and decode DIGIPINs, supporting geolocation services, postal logistics, and spatial analysis applications.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Node.js](https://img.shields.io/badge/Node.js-v14+-green.svg)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-v4.x-blue.svg)](https://expressjs.com/)
 
@@ -180,7 +180,7 @@ Please ensure your code adheres to the existing style and passes all tests.
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License, Version 2.0 - see the [LICENSE](LICENSE) file for details.
 
 ---
 
