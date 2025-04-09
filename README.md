@@ -1,25 +1,36 @@
-# 🇮🇳 DIGIPIN API – Developed by India Post
+# DIGIPIN API by Department of Posts
 
-DIGIPIN (Digital PIN) is a 10-character alphanumeric geocode developed by the Department of Posts, India. It encodes high-precision geographic coordinates into a compact, user-friendly code and can also be decoded back to latitude/longitude.
+<div align="center" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Ministry_of_Communications_India.svg/1920px-Ministry_of_Communications_India.svg.png" alt="Ministry of Communications" width="240"/>
+  <img src="https://dev.cept.gov.in/mydigipin/_next/image?url=%2Fmydigipin%2Fimages%2Findiapost_logo_v2.webp&w=1920&q=75" alt="India Post" width="120"/>
+</div>
 
-This open-source Node.js project exposes a public API to generate and decode DIGIPINs. Intended for use in geolocation services, postal logistics, and spatial analysis.
+## A Geospatial Addressing Solution by India Post
+
+DIGIPIN (Digital PIN) is a 10-character alphanumeric geocode developed by the Department of Posts, India. It provides a precise, user-friendly way to encode geographic coordinates that can be easily shared and decoded back to latitude/longitude pairs.
+
+This open-source Node.js project exposes a public API to generate and decode DIGIPINs, supporting geolocation services, postal logistics, and spatial analysis applications.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-v14+-green.svg)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-v4.x-blue.svg)](https://expressjs.com/)
 
 ---
 
 ## 🏛️ About DIGIPIN
 
-The Department of Posts has undertaken an initiative to establish a Digital Public Infrastructure (DPI) for a standardized, geo-coded addressing system in India. As a part of this initiative, the Department is releasing the final version of DIGIPIN – the foundation layer of the DPI.
+The Department of Posts has undertaken an initiative to establish a Digital Public Infrastructure (DPI) for a standardized, geo-coded addressing system in India. DIGIPIN represents the foundation layer of this infrastructure.
 
-DIGIPIN is an open-source national-level addressing grid developed by the Department of Posts in collaboration with IIT Hyderabad and NRSC, ISRO. It serves as a key component of the digital address ecosystem.
+Developed in collaboration with IIT Hyderabad and NRSC (National Remote Sensing Centre, ISRO), DIGIPIN is an open-source national-level addressing grid that serves as a key component of India's digital address ecosystem.
 
-After extensive public consultation and expert review, the DIGIPIN Grid has been finalized to provide simplified addressing solutions for seamless delivery of public and private services and enable “Address as a Service” (AaaS) across the country.
+After extensive public consultation and expert review, the DIGIPIN Grid has been finalized to provide simplified addressing solutions for seamless delivery of public and private services, enabling "Address as a Service" (AaaS) across the country.
 
-Key highlights of DIGIPIN:
+### Key Highlights
 
-- A uniform offline/online address referencing framework for logical, precise location identification
-- Enables GIS integration, bridging the gap between physical and digital addresses
-- Supports digitalization of service delivery across sectors such as emergency response, e-commerce, logistics, BFSI (Banking, Financial Services & Insurance), and governance
-- Aligns with the National Geospatial Policy 2022, enriching India’s geospatial knowledge stack
+- **Uniform Referencing Framework**: Provides logical, precise location identification both offline and online
+- **GIS Integration**: Bridges the gap between physical and digital addresses
+- **Cross-Sector Support**: Enhances service delivery across emergency response, e-commerce, logistics, BFSI, and governance
+- **Policy Alignment**: Complies with the National Geospatial Policy 2022, enriching India's geospatial knowledge stack
 
 DIGIPIN simplifies address management and enhances service delivery accuracy, promoting a thriving geospatial ecosystem for India's digital economy.
 
@@ -27,18 +38,158 @@ DIGIPIN simplifies address management and enhances service delivery accuracy, pr
 
 ## ✨ Features
 
-- Encode latitude and longitude into a 10-character DIGIPIN
-- Decode a DIGIPIN to its center-point coordinates
-- Lightweight, fast, and precise
-- RESTful API with interactive Swagger documentation
-- Built using Node.js and Express
+- **Encode**: Convert latitude and longitude into a compact 10-character DIGIPIN
+- **Decode**: Transform a DIGIPIN back to its center-point coordinates
+- **Lightweight**: Optimized for performance and minimal resource usage
+- **RESTful API**: Clean, standard-compliant endpoints
+- **Interactive Documentation**: Comprehensive Swagger UI for easy exploration
+- **Production-Ready**: Built with Node.js and Express for reliability
 
 ---
 
-## 📦 Getting Started
+## 📦 Installation
 
-### 1. Clone the Repository
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+### Getting Started
+
+1. **Clone the Repository**
 
 ```bash
 git clone https://github.com/CEPT-VZG/digipin.git
-cd digipin-api
+cd digipin
+```
+
+2. **Install Dependencies**
+
+```bash
+npm install
+```
+
+3. **Environment Setup**
+
+Create a `.env` file in the project root with the following variables:
+
+```
+PORT=5000
+NODE_ENV=development
+```
+
+4. **Start the Server**
+
+```bash
+npm start
+```
+
+For development with hot reloading:
+
+```bash
+npm run dev
+```
+
+The API will be available at `http://localhost:5000`.
+
+---
+
+## 🚀 API Usage
+
+### Encode Coordinates to DIGIPIN
+
+```
+GET /api/v1/encode?lat=12.9716&lng=77.5946
+```
+
+**Response:**
+
+```json
+{
+  "status": "success",
+  "data": {
+    "digipin": "8C9M2PQR3X",
+    "coordinates": {
+      "lat": 12.9716,
+      "lng": 77.5946
+    }
+  }
+}
+```
+
+### Decode DIGIPIN to Coordinates
+
+```
+GET /api/v1/decode?digipin=8C9M2PQR3X
+```
+
+**Response:**
+
+```json
+{
+  "status": "success",
+  "data": {
+    "digipin": "8C9M2PQR3X",
+    "coordinates": {
+      "lat": 12.9716,
+      "lng": 77.5946
+    }
+  }
+}
+```
+
+### Interactive API Documentation
+
+Access the Swagger UI documentation at:
+
+```
+http://localhost:5000/api-docs
+```
+
+---
+
+## 🧪 Testing
+
+Run the test suite:
+
+```bash
+npm test
+```
+
+Run tests with coverage report:
+
+```bash
+npm run test:coverage
+```
+
+---
+
+## 🔧 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+Please ensure your code adheres to the existing style and passes all tests.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgements
+
+- Department of Posts, Government of India
+- Indian Institute of Technology, Hyderabad
+- National Remote Sensing Centre, ISRO
+
+---
+
+*Transforming addresses for Digital India*
