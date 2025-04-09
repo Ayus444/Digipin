@@ -50,8 +50,8 @@ The process of identifying the cells is done in a hierarchical fashion. The enco
 ### 3.1 Bounding box
 
 Following are the details of the bounding box used:
-
-![DIGIPIN level-1 grid lines overlaid over Indian region](./images/figure1.png)
+ 
+<img src="./images/digipin-grid-bounding-box.png" alt="DIGIPIN grid bounding box" width="400"/>
 *Figure 1: DIGIPIN level-1 grid lines (yellow) overlaid over the Indian region showing the extent of DIGIPIN bounding box*
 
 * Longitude 63.5 – 99.5 degrees east
@@ -86,7 +86,7 @@ The choice of the corner points of the bounding box are based on the following c
 
 ### 3.3 Labelling of regions at various levels
 
-![Labelling of DIGIPIN level-1 grids](./images/figure2.png)
+<img src="./images/digipin-grid-labels.png" alt="DIGIPIN grid labels" width="400"/>
 *Figure 2: Labelling of DIGIPIN level-1 grids (left) and 4x4 grid used for labelling (right)*
 
 * In first iteration (level-1), the bounding box is divided into 16 regions using a 4x4 grid and each region is labelled using 16 symbols, 2, 3, 4, 5, 6, 7, 8, 9, C, F, J, K, L, M, P, and T, as shown in ***Figure 2***.
@@ -96,8 +96,8 @@ The choice of the corner points of the bounding box are based on the following c
 * Each Level-1 region is further split into 16 sub-regions called Level-2 regions as illustrated in the ***Figure 3***. The regions are hierarchically partitioned into sub-regions in an identical fashion.
 
 * Symbols are assigned in anticlockwise fashion, spiraling outwards. The grid provides some sense of directionality and adjacency cells labeled by consecutive symbols (such as 6 and 7) are geographical neighbors.
-
-![Labelling of DIGIPIN level-2 grids](./images/figure3.png)
+ 
+<img src="./images/digipin-grid-labels.png" alt="DIGIPIN grid labels" width="400"/>
 *Figure 3: Labelling of DIGIPIN level-2 grids (left) and 4x4 grid used for labelling (right)*
 
 ### 3.4 Assigning DIGIPIN to coordinates coinciding with DIGIPIN Grid Lines
@@ -129,7 +129,8 @@ The ***figure 4*** illustrates the complete procedure for generating DIGIPIN for
 
 | Level-1 | Level-2 |
 |---------|---------|
-| ![Level-1 grid](./images/level1.png) | ![Level-2 grid](./images/level2.png) |
+| 
+<img src="./images/digipin-level-1.png" alt="DIGIPIN Level 1" width="400"/> | <img src="./images/digipin-level-2.png" alt="DIGIPIN Level 2" width="400"/> |
 | **3** | **9** |
 
 | Level-3 | Level-4 |
