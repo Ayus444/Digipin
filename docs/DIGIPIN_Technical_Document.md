@@ -127,30 +127,99 @@ As explained above, the DIGIPIN generation is an iterative procedure. At level-1
 
 The ***figure 4*** illustrates the complete procedure for generating DIGIPIN for a specific location. For example, the geographical coordinates of Dak Bhawan (28.622788°N, 77.213033°E) are marked with a red star on the India base map. The figure demonstrates the selection of DIGIPIN symbols at each level, based on the grid encompassing Dak Bhawan. The DIGIPIN of Dak Bhawan is 39J 49L L8T4.
 
-| Level-1 | Level-2 |
-|---------|---------|
-| 
-<img src="./images/digipin-level-1.png" alt="DIGIPIN Level 1" width="400"/> | <img src="./images/digipin-level-2.png" alt="DIGIPIN Level 2" width="400"/> |
-| **3** | **9** |
+<table>
+  <tr>
+    <th align="center">Level-1</th>
+    <th align="center">Level-2</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="./images/digipin-level-1.png" alt="DIGIPIN Level 1" width="400"/>
+    </td>
+    <td>
+      <img src="./images/digipin-level-2.png" alt="DIGIPIN Level 2" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><strong>3</strong></td>
+    <td align="center"><strong>9</strong></td>
+  </tr>
+</table> 
 
-| Level-3 | Level-4 |
-|---------|---------|
-| ![Level-3 grid](./images/level3.png) | ![Level-4 grid](./images/level4.png) |
-| **J** | **4** |
+<table>
+  <tr>
+    <th align="center">Level-3</th>
+    <th align="center">Level-4</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="./images/digipin-level-3.png" alt="DIGIPIN Level 3" width="400"/>
+    </td>
+    <td>
+      <img src="./images/digipin-level-4.png" alt="DIGIPIN Level 4" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><strong>J</strong></td>
+    <td align="center"><strong>4</strong></td>
+  </tr>
+</table> 
 
-| Level-5 | Level-6 |
-|---------|---------|
-| ![Level-5 grid](./images/level5.png) | ![Level-6 grid](./images/level6.png) |
-| **9** | **L** |
+<table>
+  <tr>
+    <th align="center">Level-5</th>
+    <th align="center">Level-6</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="./images/digipin-level-5.png" alt="DIGIPIN Level 5" width="400"/>
+    </td>
+    <td>
+      <img src="./images/digipin-level-6.png" alt="DIGIPIN Level 6" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><strong>9</strong></td>
+    <td align="center"><strong>L</strong></td>
+  </tr>
+</table> 
 
-| Level-7 | Level-8 |
-|---------|---------|
-| ![Level-7 grid](./images/level7.png) | ![Level-8 grid](./images/level8.png) |
-| **L** | **8** |
+<table>
+  <tr>
+    <th align="center">Level-7</th>
+    <th align="center">Level-8</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="./images/digipin-level-7.png" alt="DIGIPIN Level 7" width="400"/>
+    </td>
+    <td>
+      <img src="./images/digipin-level-8.png" alt="DIGIPIN Level 8" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><strong>L</strong></td>
+    <td align="center"><strong>8</strong></td>
+  </tr>
+</table>  
 
-| Level-9 | Level-10 |
-|---------|---------|
-| ![Level-9 grid](./images/level9.png) | ![Level-10 grid](./images/level10.png) |
-| **T** | **4** |
+<table>
+  <tr>
+    <th align="center">Level-9</th>
+    <th align="center">Level-10</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="./images/digipin-level-9.png" alt="DIGIPIN Level 9" width="400"/>
+    </td>
+    <td>
+      <img src="./images/digipin-level-10.png" alt="DIGIPIN Level 10" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><strong>T</strong></td>
+    <td align="center"><strong>4</strong></td>
+  </tr>
+</table>   
 
 *Figure 4: Illustration of procedure for deriving DIGIPIN of a known location*
