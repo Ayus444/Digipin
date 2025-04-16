@@ -129,23 +129,7 @@ http://localhost:5000/api-docs
 ```
 
 ---
-
-## 🧪 Testing
-
-Run the test suite:
-
-```bash
-npm test
-```
-
-Run tests with coverage report:
-
-```bash
-npm run test:coverage
-```
-
----
-
+ 
 ## 🔧 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
