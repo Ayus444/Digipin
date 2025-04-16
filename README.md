@@ -99,43 +99,25 @@ The API will be available at `http://localhost:5000`.
 ### Encode Coordinates to DIGIPIN
 
 ```
-GET /api/v1/encode?lat=12.9716&lng=77.5946
+GET /api/digipin/encode?latitude=12.9716&longitude=77.5946
 ```
 
 **Response:**
 
 ```json
-{
-  "status": "success",
-  "data": {
-    "digipin": "8C9M2PQR3X",
-    "coordinates": {
-      "lat": 12.9716,
-      "lng": 77.5946
-    }
-  }
-}
+{"digipin":"4P3-JK8-52C9"}
 ```
 
 ### Decode DIGIPIN to Coordinates
 
 ```
-GET /api/v1/decode?digipin=8C9M2PQR3X
+GET /api/digipin/decode?digipin=4P3-JK8-52C9
 ```
 
 **Response:**
 
 ```json
-{
-  "status": "success",
-  "data": {
-    "digipin": "8C9M2PQR3X",
-    "coordinates": {
-      "lat": 12.9716,
-      "lng": 77.5946
-    }
-  }
-}
+{"latitude":"12.971601","longitude":"77.594584"}
 ```
 
 ### Interactive API Documentation
