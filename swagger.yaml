@@ -107,3 +107,55 @@ paths:
                     type: number
         '400':
           description: Invalid DIGIPIN
+
+  /digipin/get-distance:
+    post:
+      summary: Calculate Surface distance between two DIGIPINs.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                src_digipin:
+                  type: string
+                dest_digipin:
+                  type: string
+      responses:
+        '200':
+          description: Successfully calculated Surface distance in Kilo-meters.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  distance:
+                    type: string
+        '400':
+          description: Invalid input
+    get:
+      summary: Calculate Surface distance between two DIGIPINs.
+      parameters:
+        - in: query
+          name: src_digipin
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: dest_digipin
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Calculate Surface distance between two DIGIPINs.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  distance:
+                    type: string
+        '400':
+          description: Invalid input
