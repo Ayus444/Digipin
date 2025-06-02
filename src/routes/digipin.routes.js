@@ -6,7 +6,7 @@ router.post('/encode', (req, res) => { const { latitude, longitude } = req.body;
 
 router.post('/decode', (req, res) => { const { digipin } = req.body; try { const coords = getLatLngFromDigiPin(digipin); res.json(coords); } catch (e) { res.status(400).json({ error: e.message }); } });
 
-router.post('/get-distance', (req, res) => { const { src_digipin, dest_digipin } = req.body; try { const distance = getDistance(src_digipin, dest_digipin); res.json({ distance }); } catch (e) { res.status(400).json({ error: e.message }); } });
+router.post('/get-distance', (req, res) => { const { src_digipin: srcDigipin, dest_digipin: destDigipin } = req.body; try { const distance = getDistance(srcDigipin, destDigipin); res.json({ distance }); } catch (e) { res.status(400).json({ error: e.message }); } });
 
   router.get('/encode', (req, res) => {
     const { latitude, longitude } = req.query;
@@ -29,9 +29,9 @@ router.post('/get-distance', (req, res) => { const { src_digipin, dest_digipin }
   });
 
   router.get('/get-distance', (req, res) => {
-  const { src_digipin, dest_digipin } = req.query;
+  const { src_digipin: srcDigipin, dest_digipin: destDigipin  } = req.query;
   try {
-      const distance = getDistance(src_digipin, dest_digipin);
+      const distance = getDistance(srcDigipin, destDigipin);
       res.json({ distance });
     } catch (e) {
       res.status(400).json({ error: e.message });
