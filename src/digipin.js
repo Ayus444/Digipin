@@ -6,6 +6,9 @@
  * This module contains two main functions:
  *  - getDigiPin(lat, lon): Encodes latitude & longitude into a 10-digit alphanumeric DIGIPIN
  *  - getLatLngFromDigiPin(digiPin): Decodes a DIGIPIN back into its central latitude & longitude
+ * 
+ * This module contains one Utility functions:
+ *  - getDistance(srcDigipin, destDigipin): Calculates the distance between two DIGIPINs
  */
 
 const DIGIPIN_GRID = [
@@ -113,5 +116,27 @@ const DIGIPIN_GRID = [
     };
   }
   
+  function getDistance(src_digipin, dest_digipin) {
+    const src_coords = getLatLngFromDigiPin(src_digipin);
+    const dest_coords = getLatLngFromDigiPin(dest_digipin);
   
-  if (typeof module !== 'undefined') module.exports = { getDigiPin, getLatLngFromDigiPin };
+    const R = 6371e3; // Earth's radius in meters
+    const lat1 = src_coords.latitude * Math.PI / 180;
+    const lat2 = dest_coords.latitude * Math.PI / 180;
+
+    // Using Haversine formula
+    const deltaLat = (dest_coords.latitude - src_coords.latitude) * Math.PI / 180;
+    const deltaLon = (dest_coords.longitude - src_coords.longitude) * Math.PI / 180;
+  
+    const a = Math.sin(deltaLat / 2) * Math.sin(deltaLat / 2) +
+              Math.cos(lat1) * Math.cos(lat2) *
+              Math.sin(deltaLon / 2) * Math.sin(deltaLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  
+    // Distance in Kilo-Meters.
+    const distance = Math.round(R * c) / 1000;
+
+    return distance;
+  }
+  
+  if (typeof module !== 'undefined') module.exports = { getDigiPin, getLatLngFromDigiPin, getDistance };
