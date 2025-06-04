@@ -22,7 +22,7 @@ paths:
                 longitude:
                   type: number
       responses:
-        '200':
+        "200":
           description: Successfully encoded DIGIPIN
           content:
             application/json:
@@ -31,7 +31,7 @@ paths:
                 properties:
                   digipin:
                     type: string
-        '400':
+        "400":
           description: Invalid input
     get:
       summary: Encode latitude and longitude into DIGIPIN
@@ -47,7 +47,7 @@ paths:
           schema:
             type: number
       responses:
-        '200':
+        "200":
           description: Successfully encoded DIGIPIN
           content:
             application/json:
@@ -56,7 +56,7 @@ paths:
                 properties:
                   digipin:
                     type: string
-        '400':
+        "400":
           description: Invalid input
 
   /digipin/decode:
@@ -72,7 +72,7 @@ paths:
                 digipin:
                   type: string
       responses:
-        '200':
+        "200":
           description: Successfully decoded DIGIPIN
           content:
             application/json:
@@ -83,7 +83,7 @@ paths:
                     type: number
                   longitude:
                     type: number
-        '400':
+        "400":
           description: Invalid DIGIPIN
     get:
       summary: Decode DIGIPIN to coordinates
@@ -94,7 +94,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Successfully decoded DIGIPIN
           content:
             application/json:
@@ -105,5 +105,38 @@ paths:
                     type: number
                   longitude:
                     type: number
-        '400':
+        "400":
           description: Invalid DIGIPIN
+
+  /digipin/validate:
+    get:
+      summary: Validate a DIGIPIN
+      description: Checks whether a given DIGIPIN is valid based on its format and characters.
+      parameters:
+        - in: query
+          name: digipin
+          required: true
+          schema:
+            type: string
+            example: "FJ4M-925C-7T"
+      responses:
+        "200":
+          description: DIGIPIN validation result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isValid:
+                    type: boolean
+                    example: true
+        "400":
+          description: Invalid request or DIGIPIN format
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid DIGIPIN"
