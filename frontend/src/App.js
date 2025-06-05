@@ -105,5 +105,3 @@ function App() {
 }
 
 export default App;
-// import React, { useState } from 'react';
-// import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';   
