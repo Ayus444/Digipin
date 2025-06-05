@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './App.css';
-
 function LocationMarker({ setCoordinates }) {
   useMapEvents({
     click(e) {
