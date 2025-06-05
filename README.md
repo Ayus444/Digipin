@@ -159,3 +159,25 @@ This project is licensed under the Apache License, Version 2.0 - see the [LICENS
 ---
 
 *Transforming addresses for Digital India*
+
+
+## 🎨 UI Development Notes
+
+### 👤 Developed by: @IbhavMalviya  
+GitHub: https://github.com/IbhavMalviya
+https://www.linkedin.com/in/ibhavmalviya/
+
+Date: June 6, 2025
+
+I designed and structured the UI to be clean, responsive, and user-friendly, ensuring consistency across different screen sizes and modes.
+
+#### 🔹 Key UI Improvements:
+- Used **flexbox** and **responsive styling** to align inputs and buttons properly.
+- Implemented **DigiPin display box** with a clean card-style look and shadow effect.
+- Styled the **Map** component with rounded corners and drop shadows for visual depth.
+- Used consistent font (`Segoe UI`) and spacing to improve readability.
+- Added hover effects and transition animations to interactive elements (like buttons).
+- Maintained accessibility by using labels and readable color contrasts.
+
+> Note: Dark Mode support is planned but not yet implemented.
+
