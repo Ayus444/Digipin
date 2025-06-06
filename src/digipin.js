@@ -32,7 +32,7 @@ function isValidDigiPin(pin) {
 
   return (
     !pin.includes("-") ||
-    /^[A-Z0-9]{3}-[A-Z0-9]{3}-[A-Z0-9]{4}$/.test(pin.toUpperCase())
+    /^[2-9CFJKLMTP]{3}-[2-9CFJKLMTP]{3}-[2-9CFJKLMTP]{4}$/.test(pin.toUpperCase())
   );
 }
 
