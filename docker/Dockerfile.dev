@@ -1,6 +1,6 @@
 # Dockerfile.dev (Development with hot reload)
 # Use full Node.js image for dev tools
-FROM node:20
+FROM node:24-slim
 
 # Set working directory
 WORKDIR /app
