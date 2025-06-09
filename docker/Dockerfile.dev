@@ -1,0 +1,27 @@
+# Dockerfile.dev (Development with hot reload)
+# Use full Node.js image for dev tools
+FROM node:20
+
+# Set working directory
+WORKDIR /app
+
+# Install nodemon globally for hot reload
+RUN npm install -g nodemon
+
+# Copy package files
+COPY package*.json ./
+
+# Install all dependencies (including dev)
+RUN npm install
+
+# Copy all project files
+COPY . .
+
+# Expose port
+EXPOSE 5000
+
+# Set environment variable
+ENV NODE_ENV=development
+
+# Run with hot reload
+CMD ["npm", "run", "dev"]
