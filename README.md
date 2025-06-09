@@ -111,7 +111,7 @@ Development setup uses hot-reloading for faster iteration.
 
 Run this command from the project root:
 ```bash
-sudo docker compose -f docker/docker-compose.dev.yml up --build
+docker compose -f docker/docker-compose.dev.yml up --build
 ```
 
 This will:
@@ -128,7 +128,7 @@ Open your browser and go to: `http://localhost:5000`
 
 Press `Ctrl+C` in the terminal or run:
 ```bash
-sudo docker compose -f docker/docker-compose.dev.yml down
+docker compose -f docker/docker-compose.dev.yml down
 ```
 
 ### Production
@@ -139,7 +139,7 @@ Production setup builds an optimized image without dev dependencies.
 
 Run this command from the project root:
 ```bash
-sudo docker compose -f docker/docker-compose.prod.yml up --build -d
+docker compose -f docker/docker-compose.prod.yml up --build -d
 ```
 
 This will:
@@ -155,7 +155,7 @@ Open your browser and go to: `http://localhost:5000`
 
 Run:
 ```bash
-sudo docker compose -f docker/docker-compose.prod.yml down
+docker compose -f docker/docker-compose.prod.yml down
 ```
 
 ### Notes
