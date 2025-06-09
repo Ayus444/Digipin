@@ -94,6 +94,78 @@ The API will be available at `http://localhost:5000`.
 
 ---
 
+## Running DIGIPIN with Docker
+
+This project includes Docker setup to run DIGIPIN easily in both development and production environments.
+
+### Prerequisites
+- Docker installed
+- Docker Compose installed
+- `.env` file present in project root with required environment variables (e.g., `PORT=5000`, `NODE_ENV=development`)
+
+### Development
+
+Development setup uses hot-reloading for faster iteration.
+
+**Start the development container**
+
+Run this command from the project root:
+```bash
+sudo docker compose -f docker/docker-compose.dev.yml up --build
+```
+
+This will:
+- Build the dev image with all dependencies
+- Mount your local source code inside the container
+- Start the server with hot-reload enabled (via nodemon)
+- Map container port 5000 to your localhost port 5000
+
+**Access your app**
+
+Open your browser and go to: `http://localhost:5000`
+
+**Stop development server**
+
+Press `Ctrl+C` in the terminal or run:
+```bash
+sudo docker compose -f docker/docker-compose.dev.yml down
+```
+
+### Production
+
+Production setup builds an optimized image without dev dependencies.
+
+**Build and start the production container**
+
+Run this command from the project root:
+```bash
+sudo docker compose -f docker/docker-compose.prod.yml up --build -d
+```
+
+This will:
+- Build the production image using Dockerfile
+- Run the container in detached mode (`-d`)
+- Map container port 5000 to your localhost port 5000
+
+**Access your app**
+
+Open your browser and go to: `http://localhost:5000`
+
+**Stop production container**
+
+Run:
+```bash
+sudo docker compose -f docker/docker-compose.prod.yml down
+```
+
+### Notes
+
+- Make sure your `.env` file contains all required environment variables
+- If you want to rebuild images after code changes (especially for production), add `--build` to the compose up command
+- The Dockerfiles and compose files are located in the `docker/` directory
+
+---
+
 ## 🚀 API Usage
 
 ### Encode Coordinates to DIGIPIN
