@@ -105,7 +105,7 @@ GET /api/digipin/encode?latitude=12.9716&longitude=77.5946
 **Response:**
 
 ```json
-{"digipin":"4P3-JK8-52C9"}
+{ "digipin": "4P3-JK8-52C9" }
 ```
 
 ### Decode DIGIPIN to Coordinates
@@ -117,7 +117,7 @@ GET /api/digipin/decode?digipin=4P3-JK8-52C9
 **Response:**
 
 ```json
-{"latitude":"12.971601","longitude":"77.594584"}
+{ "latitude": "12.971601", "longitude": "77.594584" }
 ```
 
 ### Interactive API Documentation
@@ -129,7 +129,7 @@ http://localhost:5000/api-docs
 ```
 
 ---
- 
+
 ## 🔧 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -158,4 +158,39 @@ This project is licensed under the Apache License, Version 2.0 - see the [LICENS
 
 ---
 
-*Transforming addresses for Digital India*
+_Transforming addresses for Digital India_
+
+## 🎨 New UI Improvements
+
+### 👨🏻‍💻 Developed by: [Abhijit47](https://github.com/Abhijit47)
+
+Github: [Abhijit47](https://github.com/Abhijit47)
+LinkedIn: [Abhijit Karmakar](https://www.linkedin.com/in/abhijit-karmakar/)
+
+Date: June 8, 2025
+
+I was designed a straight forward and user-friendly interface for the DIGIPIN API. The new UI focuses on simplicity and ease of use, allowing users to quickly encode and decode DIGIPINs without any hassle.
+
+### Key Features of the New UI
+
+- **Clean Design**: A modern, minimalist layout that emphasizes functionality
+- **Responsive**: Works seamlessly on both desktop and mobile devices
+- **Intuitive Navigation**: Easy access to encode and decode functionalities
+- **Real-time Feedback**: Instant results displayed as you input coordinates or DIGIPINs
+- **Error Handling**: Clear messages for clicking outside boundry
+- **Accessibility**: Designed with accessibility in mind, ensuring all users can interact with the interface
+- **Dark Mode**: Option to switch between light and dark themes for user preference
+- **Interactive Elements**: Buttons designed for easy interaction, with hover effects and clear labels
+
+### Technical Details
+
+The new UI is built using modern web technologies, ensuring fast load times and smooth interactions.
+
+- **Framework**: Next.js for server-side rendering and static site generation
+- **Styling**: Tailwind CSS for responsive and customizable design
+- **Ui Components**: Shadcn/ui for pre-built, accessible components
+- **State Management**: React hooks for managing application state
+- **Deployment**: Hosted on Vercel for optimal performance and scalability
+
+Preview Image: ![alt text](image.png)
+Preview the new UI at [DIGIPIN UI](https://nxt-digipin.vercel.app/).
