@@ -61,9 +61,30 @@ const DIGIPIN_GRID = [
   
   
   function getLatLngFromDigiPin(digiPin) {
-    const pin = digiPin.replace(/-/g, '');
-    if (pin.length !== 10) throw new Error('Invalid DIGIPIN');
-    
+/**
+* Permit users to append information to the DIGIPIN.
+* Such characters could be used to include extra information over the DIGIPIN.
+* An example would be inclusion of flat number in a multi apartment building.
+* Instead of insisting on pre-processing to remove such user modifications,
+* the function should accept such strings which may include characters not part of DIGIPIN and which may be longer than 10 digits.
+* and retrieve valid DIGIPIN from it.
+
+* Thus, even if I supply a DIGIPIN with user appended information (for example, M377C9624J.12),
+* the function would use only the valid DIGIPIN (M377C9624J from the example).
+*/
+
+// define characters to exclude
+    const regex = /[^23456789CFJKLMPT]/g;
+// remove unallowed characters and get the first ten valid characters
+    vDigiPin = vDigiPin.toUpperCase().replace(regex, '').slice(0,10)
+// warn if length less than 10
+    if (vDigiPin.length < 10)
+        console.warn("truncated DIGIPIN")
+// error if no valid characters
+    if (vDigiPin.length == 0) {
+        return "Invalid DIGIPIN";
+        }
+   
     let minLat = BOUNDS.minLat;
     let maxLat = BOUNDS.maxLat;
     let minLon = BOUNDS.minLon;
